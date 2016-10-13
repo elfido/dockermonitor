@@ -1,0 +1,6 @@
+apps:
+    - script: index.js
+      watch: true
+      env:
+        APP_PORT: 3001
+        NODE_ENV: development

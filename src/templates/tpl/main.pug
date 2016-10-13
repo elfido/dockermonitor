@@ -1,0 +1,52 @@
+html
+  head
+    link(href="https://bootswatch.com/flatly/bootstrap.min.css" rel="stylesheet")
+    link(href="resources/css/global.css" rel="stylesheet")
+    link(href="resources/css/font-awesome.min.css" rel="stylesheet")
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    block title
+      title intra 0.1.0
+    script(src="resources/js/global/external.min.js")
+  body
+    block navbar
+      nav.navbar.navbar-default
+        div.container-fluid
+          div.navbar-header
+            button.navbar-toggle.collapsed(data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false")
+              span.sr-only Toggle navigation
+              span.iconbar
+              span.iconbar
+              span.iconbar
+            a.navbar-brand(href="#") Fido
+          div.collapse.navbar-collapse#navbar-collapse-1
+            ul.nav.navbar-nav
+              li.active
+                a(href="images") Images
+                  span.sr-only (current)
+              li
+                a(href="#") Link
+              li.dropbdown
+                a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Dropdown
+                  span.caret
+                  ul.dropdown-menu
+                    li
+                      a(href="#") Action
+            ul.nav.navbar-nav.navbar-right
+              li.dropbdown.language-control
+                a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+                  span.glyphicon.glyphicon-globe(aria-hidden="true")
+                  |  Language
+                  span.caret
+                  ul.dropdown-menu
+                    li
+                      a.cmd-switch-language(href="#" data-lang="en") English
+                    li
+                      a.cmd-switch-language(href="#" data-lang="es") Spanish
+  div.container-fluid
+    div.col-md-2
+    div.col-md-8
+      div.message-container
+    div.col-md-2
+    block content
